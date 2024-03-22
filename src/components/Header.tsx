@@ -1,8 +1,8 @@
 export function Header() {
     return (
         <header>
-            <nav className="navbar navbar-expand-lg bg-body-tertiary p-4" data-bs-theme="dark">
-                <div className="container-fluid">
+            <nav className="navbar navbar-expand-lg bg-dark p-4" data-bs-theme="dark" style={{borderBottom: '1px solid #3C3C3C'}}>
+                <div className="container">
                     <a className="navbar-brand" href="#">Lifters Shop</a>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mb-2 mb-lg-0">
