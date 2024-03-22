@@ -1,0 +1,36 @@
+/* Details.css */
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+}
+
+.main-image {
+    width: 100%; /* Assegura que a imagem principal se ajuste ao espaço disponível */
+    object-fit: cover; /* Mantém as proporções da imagem ao redimensionar */
+}
+
+.thumbnail-images img {
+    max-width: 24px; /* Limita o tamanho das imagens miniatura */
+    cursor: pointer; /* Muda o cursor para indicar que as imagens são clicáveis */
+    border: none; /* Remove a borda padrão de thumbnails do Bootstrap */
+}
+
+.product-title {
+    font-size: 2rem; /* Tamanho da fonte para o título do produto */
+    margin-bottom: 1rem;
+}
+
+.product-price {
+    font-size: 1.5rem; /* Tamanho da fonte para o preço */
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.product-description {
+    margin-bottom: 2rem;
+}
+
+.add-to-bag-btn {
+    width: 100%; /* Faz o botão se estender por toda a largura da coluna */
+}

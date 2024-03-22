@@ -1,3 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
+import { useProduct } from "../hooks/useProduct";
+
 import { ColorCircle } from "./ColorCircle";
 import { SizeSpan } from "./SizeSpan";
 
@@ -17,9 +21,17 @@ export interface ProductProps {
     }>;
 }
 
-export function Product({titulo, valor, categoria, cores, tamanhos, fotos}: ProductProps) {
+export function Product({ titulo, valor, descricao, categoria, cores, tamanhos, fotos }: ProductProps) {
+    const { setSelectedProduct } = useProduct();
+
+    const navigate = useNavigate();
 
     const coverPhoto = fotos.find(photograph => photograph.capa) || fotos[0];
+
+    const handleViewDetails = () => {
+        setSelectedProduct({ titulo, valor, descricao, categoria, cores, tamanhos, fotos });
+        navigate('/details');
+    };
 
     return (
         <div className="card p-0" style={{ width: '18rem' }}>
@@ -43,7 +55,7 @@ export function Product({titulo, valor, categoria, cores, tamanhos, fotos}: Prod
                     </div>
                 </div>
                 <div className="d-grid">
-                    <button className="btn btn-primary" type="button">View details</button>
+                    <button className="btn btn-dark" type="button" onClick={handleViewDetails}>View details</button>
                 </div>
             </div>
         </div>

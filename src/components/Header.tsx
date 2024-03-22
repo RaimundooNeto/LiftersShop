@@ -1,13 +1,14 @@
 export function Header() {
+
     return (
         <header>
-            <nav className="navbar navbar-expand-lg bg-dark p-4" data-bs-theme="dark" style={{borderBottom: '1px solid #3C3C3C'}}>
+            <nav className="navbar navbar-expand-lg bg-dark p-4" data-bs-theme="dark" style={{ borderBottom: '1px solid #3C3C3C' }}>
                 <div className="container">
-                    <a className="navbar-brand" href="#">Lifters Shop</a>
+                    <a className="navbar-brand" href="/">Lifters Shop</a>
                     <div className="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav mb-2 mb-lg-0">
                             <li className="nav-item me-3">
-                                <a className="nav-link active" aria-current="page" href="#">Shop</a>
+                                <a className="nav-link active" aria-current="page" href="/">Shop</a>
                             </li>
                             <li className="nav-item me-3">
                                 <a className="nav-link" href="#">Stories</a>
@@ -25,7 +26,9 @@ export function Header() {
                             </div>
                         </form>
                         <div>
-                            <span className="navbar-text me-5">Carrinho</span>
+                            <button type="button" className="btn btn-dark me-4">
+                                <i className="bi bi-bag"></i>
+                            </button>
                             <button type="button" className="btn btn-outline-light">Login</button>
                         </div>
                     </div>
